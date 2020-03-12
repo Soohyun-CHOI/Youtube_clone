@@ -1,0 +1,33 @@
+div {
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+:root {
+    --headerHeight: 56px;
+    --mainColor: #f9f9f9;
+    --sideColor: rgba(255, 255, 255, 0.3);
+}
+
+html, body {
+    margin: 0; padding: 0;
+}
+
+
+
+/* ==============Header=============== */
+
+header {
+    width: 100vw;
+    height: var(--headerHeight);
+    background-color: var(--sideColor);
+    position: fixed;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}

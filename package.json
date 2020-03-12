@@ -1,0 +1,31 @@
+{
+  "name": "03_youtube",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss-preset-env": "^6.7.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 0
+      }
+    }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soohyun-CHOI/Youtube_clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Soohyun-CHOI/Youtube_clone/issues"
+  },
+  "homepage": "https://github.com/Soohyun-CHOI/Youtube_clone#readme",
+  "description": ""
+}
