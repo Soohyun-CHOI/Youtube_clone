@@ -5,69 +5,72 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Instagram</title>
         <link rel="stylesheet" href="youtube.css">
+        <script src="https://kit.fontawesome.com/5658349e28.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <!-- ===============Header================ -->
         <header>
             <div class="left-side">
-                <div class="burger"><img src="" alt=""></div>
+                <div class="burger"><i class="fas fa-bars"></i></div>
                 <div class="logo"><img src="logo.jpg" alt=""></div>
             </div>
-            <div class="search"></div>
+            <div class="search">
+                <div class="search-text">Search</div>
+                <a href=""><div class="search-button"><i class="fas fa-search"></i></div></a>
+            </div>
             <div class="right-side">
                 <div class="icons">
-                    <div class="icon"></div>
-                    <div class="icon"></div>
-                    <div class="icon"></div>
+                    <a href=""><div class="icon"><i class="fas fa-video"></i></div></a>
+                    <a href=""><div class="icon"><i class="fas fa-th"></i></div></a>
+                    <a href=""><div class="icon"><i class="fas fa-bell"></i></div></a>
                 </div>
-                <div class="account">수현</div>
+                <a href=""><div class="account">수현</div></a>
             </div>
         </header>
 
         <main>
             <!-- ================Menu Bar=================== -->
-            <menu-bar>
+            <div class="menu-bar">
                 <div class="menu-wrap">
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-home"></i></div>
                         <div class="menu-text">Home</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-fire"></i></div>
                         <div class="menu-text">Trending</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-dice-d6"></i></div>
                         <div class="menu-text">Subscriptions</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fab fa-youtube"></i></div>
                         <div class="menu-text">Originals</div>
                     </div>
                 </div>
 
                 <div class="menu-wrap">
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-book-open"></i></div>
                         <div class="menu-text">Library</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-history"></i></div>
                         <div class="menu-text">History</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-tag"></i></div>
                         <div class="menu-text">Purchases</div>
-                        <div class="menu-num">14</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-clock"></i></div>
                         <div class="menu-text">Watch later</div>
-                        <div class="menu-num">3</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"><i class="fas fa-play"></i></div>
                         <div class="menu-text">Liked videos</div>
                     </div>
                 </div>
@@ -102,15 +105,15 @@
                     <div class="menu-title">MORE FROM YOUTUBE</div>
                     <div class="menu-content">
                         <div class="menu">
-                            <div class="menu-icon"><img src="" alt=""></div>
+                            <div class="menu-icon"></div>
                             <div class="menu-text">YouTube Movies</div>
                         </div>
                         <div class="menu">
-                            <div class="menu-icon"><img src="" alt=""></div>
+                            <div class="menu-icon"></div>
                             <div class="menu-text">Gaming</div>
                         </div>
                         <div class="menu">
-                            <div class="menu-icon"><img src="" alt=""></div>
+                            <div class="menu-icon"></div>
                             <div class="menu-text">Live</div>
                         </div>
                     </div>
@@ -118,19 +121,19 @@
 
                 <div class="menu-wrap">
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"></div>
                         <div class="menu-text">Settings</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"></div>
                         <div class="menu-text">Report history</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"></div>
                         <div class="menu-text">Help</div>
                     </div>
                     <div class="menu">
-                        <div class="menu-icon"><img src="" alt=""></div>
+                        <div class="menu-icon"></div>
                         <div class="menu-text">Send feedback</div>
                     </div>
                 </div>
@@ -153,10 +156,10 @@
                     </div>
                     <div class="copyright">&copy; 2020 Google LLC</div>
                 </div>
-            </menu-bar>
+            </div>
             
             <!-- ------축약형 Menu Bar--------- -->
-            <menu-bar-sm>
+            <div class="menu-bar-sm">
                 <div class="menu-sm">
                     <div class="menu-sm-icon"></div>
                     <div class="menu-sm-title">Home</div>
@@ -177,13 +180,13 @@
                     <div class="menu-sm-icon"></div>
                     <div class="menu-sm-title">Library</div>
                 </div>
-            </menu-bar-sm>
+            </div>
             
 
 
 
             <!-- ================Main Contents================ -->
-            <content-wrap>
+            <div class="content-wrap">
                 <!-- -------------추천------------ -->
                 <div class="recommended">
                     <div class="recommended-title">Recommended</div>
@@ -428,7 +431,7 @@
                         </div>
                     </div>
                 </div>
-            </content-wrap>
+            </div>
         </main>
     </body>
 </html>

@@ -4,30 +4,241 @@ div {
 }
 
 :root {
-    --headerHeight: 56px;
+    --headerHeight: 45px;
+    --searchHeight: 25px;
+    --sidevarHeight: calc(100vh - var(--headerHeight));
+
+    --sidebarWidth: 200px; 
+    --mainWidth: calc(100% - var(--sidebarWidth));
+
+    --headerMargin: 20px;
+
     --mainColor: #f9f9f9;
-    --sideColor: rgba(255, 255, 255, 0.3);
+    --headerColor: rgba(255, 255, 255, 0.9); /*white 투명도*/
+    --searchColor: #777777;
+    --iconColor: #555555;
+
+    --englishFont: 'Roboto', sans-serif;
+    --koreanFont: 'Noto Sans KR', sans-serif;
 }
 
-html, body {
-    margin: 0; padding: 0;
-}
+@custom-media --el-size (max-width: 1140px);
+@custom-media --lg-size (max-width: 960px);
+@custom-media --md-size (max-width: 720px);
+@custom-media --sm-size (max-width: 540px);
+@custom-media --ls-size (max-width: 420px);
 
+
+html, body {margin: 0; padding: 0;}
+a {text-decoration: none;}
 
 
 /* ==============Header=============== */
 
 header {
-    width: 100vw;
+    width: 100%;
     height: var(--headerHeight);
-    background-color: var(--sideColor);
+    background-color: var(--headerColor);
     position: fixed;
 
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--headerMargin);
+    box-sizing: border-box;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.burger {
+    margin-right: var(--headerMargin);
+    color: var(--iconColor);
+    width: var(--headerMargin);
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    width: 100px;
+    width: 70px;
     height: auto;
 }
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--searchColor);
+
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.search-text {
+    width: 450px;
+    height: var(--searchHeight);
+    line-height: var(--searchHeight);
+    background-color: white;
+
+    font-size: 14px;
+    font-family: var(--englishFont);
+    padding-left: 10px;
+    border-right: 1px solid #cccccc;
+}
+
+.search-button {
+    width: 50px;
+    height: var(--searchHeight);
+    line-height: var(--searchHeight);
+    text-align: center;
+    font-size: 12px;
+    background-color: var(--mainColor);
+    color: var(--searchColor);
+}
+
+.search-button:hover {
+    background-color: #f2f2f2;
+}
+
+.right-side {
+    display: flex;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.icons i {
+    margin-right: var(--headerMargin);
+    color: var(--iconColor);
+}
+
+.account {
+    width: 27px; height: 27px;
+    line-height: 27px;
+    text-align: center;
+    border-radius: 300px;
+
+    text-decoration: none;
+    font-size: 11px;
+    font-family: var(--koreanFont);
+    color: white;
+    background-color: lightsteelblue;
+}
+
+
+
+/* ======================MAIN==================== */
+main {
+    padding-top: var(--headerHeight);
+}
+
+
+/* --------------MENU------------- */
+
+.menu-bar {
+    width: var(--sidebarWidth);
+    height: var(--sidevarHeight);
+    overflow: hidden;
+    position: fixed;
+    box-sizing: border-box;
+}
+
+.menu-bar:hover {
+    overflow-y: scroll;
+}
+
+.menu-wrap {
+    font-family: var(--englishFont);
+    color: var(--iconColor);
+    margin-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.menu {
+    padding: 0 var(--headerMargin);
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.menu:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 15px;
+    width: var(--headerMargin);
+    text-align: center;
+    margin-right: var(--headerMargin);
+}
+
+.menu-text {
+    font-size: 12px;
+    font-family: var(--englishFont);
+}
+
+/* 구독 */
+.menu-title {
+    font-size: 13px;
+    margin: 0 0 10px var(--headerMargin);
+    font-family: var(--englishFont);
+    font-weight: bold;
+}
+
+
+
+.menu-bar-sm {
+    display: none;
+}
+
+
+/* -------------Main Contents----------- */
+
+.content-wrap {
+    width: var(--mainWidth);
+    margin-left: var(--sidebarWidth);
+    box-sizing: border-box;
+    background-color: var(--mainColor);
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================반응형================== */
+
+@media screen and (--lg-size) {
+    .search {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+    }
+
+    .search-text {
+        width: 100%;
+    }
+
+    .search-buttons {
+        width: 100%;
+    }
+}
+
+
+
+
