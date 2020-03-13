@@ -13,3 +13,7 @@
     height: auto;
     grid-row-gap: var(--mainMargin);
 }
+
+.post-container {
+    grid-template-columns: repeat(2, 1fr);
+}

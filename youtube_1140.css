@@ -79,3 +79,10 @@
 .video-sub {
     margin-top: 0;
 }
+
+.post-container {
+    grid-template-columns: repeat(3, 1fr);
+    height: 200px;
+    grid-row-gap: 100px;
+    overflow: hidden;
+}
