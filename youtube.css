@@ -8,7 +8,7 @@ div {
     --searchHeight: 25px;
     --sidevarHeight: calc(100vh - var(--headerHeight));
 
-    --sidebarWidth: 190px; 
+    --sidebarWidth: 190px;
     --mainWidth: calc(100% - var(--sidebarWidth));
 
     --headerMargin: 20px;
@@ -18,17 +18,11 @@ div {
     --headerColor: rgba(255, 255, 255, 0.9); /*white 투명도*/
     --searchColor: #777777;
     --iconColor: #555555;
+    --videoColor: #eeeeee;
 
     --englishFont: 'Roboto', sans-serif;
     --koreanFont: 'Noto Sans KR', sans-serif;
 }
-
-@custom-media --el-size (max-width: 1140px);
-@custom-media --lg-size (max-width: 960px);
-@custom-media --md-size (max-width: 720px);
-@custom-media --sm-size (max-width: 540px);
-@custom-media --ls-size (max-width: 420px);
-
 
 html, body {margin: 0; padding: 0;}
 a {text-decoration: none;}
@@ -255,8 +249,6 @@ main {
     box-sizing: border-box;
 }
 
-/* ------추천------ */
-
 .main-block {
     padding: var(--mainMargin) 0;
     border-bottom: 3px solid #dddddd;
@@ -269,6 +261,8 @@ main {
     padding-bottom: var(--headerMargin);
 }
 
+/* ------추천------ */
+
 .video-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -279,7 +273,7 @@ main {
 .video {
     width: 100%;
     padding-top: 55%;
-    background-color: #eeeeee;
+    background-color: var(--videoColor);
 }
 
 .video-content {
@@ -310,7 +304,7 @@ main {
 
 .video-sub {
     color: var(--iconColor);
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .video-sub div:last-child {
@@ -338,16 +332,23 @@ main {
 
 .picks-title {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-family: var(--englishFont);
+    margin-bottom: var(--headerMargin);
+}
+
+.picks-title-text {
+    display: flex;
+    align-items: center;
 }
 
 .picks-title-left {
     width: 35px; height: 35px;
+    line-height: 38px;
     border-radius: 300px;
     background-color: var(--iconColor);
     text-align: center;
-    line-height: 35px;
     color: white;
     font-size: 18px;
     margin-right: 5px;
@@ -357,35 +358,68 @@ main {
     font-weight: bold;
 }
 
-.pick-title-right span {
+span {
     font-size: 12px;
     color: var(--iconColor);
 }
 
-
-
-
-
-
-
-/* =====================반응형================== */
-
-@media screen and (--lg-size) {
-    .search {
-        width: 50%;
-        display: grid;
-        grid-template-columns: 9fr 1fr;
-    }
-
-    .search-text {
-        width: 100%;
-    }
-
-    .search-buttons {
-        width: 100%;
-    }
+span a {
+    font-weight: bold;
+    color: steelblue;
 }
 
+.picks-title-x {
+    font-size: 26px;
+    color: var(--searchColor);
+}
 
+.picks-title-x:hover {
+    cursor: pointer;
+    color: var(--iconColor);
+}
+
+.pick-container {
+    display: grid;
+    height: 270px;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 100px 10px;
+}
+
+.pick-wrap:hover {
+    cursor: pointer;
+}
+
+.pick {
+    width: 100%;
+    padding-top: 135%;
+    background-color: var(--videoColor);
+}
+
+.pick-content {
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: var(--englishFont);
+    color: var(--iconColor);
+}
+
+.pick-content .title {
+    color: black;
+    font-family: var(--koreanFont);
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.pick-content span {
+    font-size: 11px;
+}
+
+.pick-content .buy {
+    padding: 2px 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: darkolivegreen;
+    background-color: #eeeeee;
+}
 
 

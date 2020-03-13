@@ -1,0 +1,59 @@
+:root {
+    --headerHeight: 45px;
+    --searchHeight: 25px;
+    --sidevarHeight: calc(100vh - var(--headerHeight));
+
+    --sidebarWidth: 190px; 
+    --smsidebarWidth: 60px;
+    --mainWidth: calc(100% - var(--sidebarWidth));
+    --smmainWidth: calc(100% - var(--smsidebarWidth));
+
+    --headerMargin: 20px;
+    --mainMargin: 30px;
+
+    --mainColor: #f9f9f9;
+    --searchColor: #777777;
+    --iconColor: #555555;
+    --videoColor: #eeeeee;
+
+    --englishFont: 'Roboto', sans-serif;
+    --koreanFont: 'Noto Sans KR', sans-serif;
+}
+
+/* ========================================================= */
+
+.menu-bar {
+    display: none;
+}
+
+.menu-bar-sm {
+    display: block;
+    height: var(--sidevarHeight);
+    overflow: hidden;
+    position: fixed;
+    box-sizing: border-box;
+
+    font-family: var(--englishFont);
+    font-size: 10px;
+}
+
+.menu-sm {
+    width: var(--smsidebarWidth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-sm:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.menu-sm-icon {
+    color: var(--iconColor);
+    font-size: 15px;
+}
+
+.menu-sm-title {
+    margin-top: 3px;
+}
