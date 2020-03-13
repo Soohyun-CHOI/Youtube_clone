@@ -8,7 +8,7 @@ div {
     --searchHeight: 25px;
     --sidevarHeight: calc(100vh - var(--headerHeight));
 
-    --sidebarWidth: 200px; 
+    --sidebarWidth: 190px; 
     --mainWidth: calc(100% - var(--sidebarWidth));
 
     --headerMargin: 20px;
@@ -190,28 +190,82 @@ main {
 
 /* 구독 */
 .menu-title {
-    font-size: 13px;
+    font-size: 12px;
     margin: 0 0 10px var(--headerMargin);
     font-family: var(--englishFont);
     font-weight: bold;
 }
 
+.subscriptions .menu-icon {
+    border-radius: 100px;
+    background-color: lightsteelblue;
+}
 
+.subscriptions .menu-text {
+    font-family: var(--koreanFont);
+}
+
+.menu-footer {
+    margin-top: 12px;
+    padding: 0 var(--headerMargin);
+    font-size: 11px;
+}
+
+.menu-footer a {
+    color: var(--iconColor);
+    font-family: var(--englishFont);
+    font-weight: bold;
+}
+
+.footer-wrap {
+    margin-bottom: 12px;
+}
+
+.footer-unit-wrap {
+    display: flex;
+}
+
+.footer-unit {
+    margin-right: 7px;
+}
+
+.copyright {
+    font-family: var(--englishFont);
+    color: var(--iconColor);
+    font-weight: lighter;
+    font-size: 11px;
+    padding: 12px 0;
+}
 
 .menu-bar-sm {
     display: none;
 }
 
 
-/* -------------Main Contents----------- */
+
+
+/* ====================Main Contents==================== */
 
 .content-wrap {
     width: var(--mainWidth);
     margin-left: var(--sidebarWidth);
-    box-sizing: border-box;
     background-color: var(--mainColor);
+    padding: 15px;
+    box-sizing: border-box;
 }
 
+.main-title {
+    font-family: var(--englishFont);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
 
 
 
