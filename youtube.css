@@ -12,6 +12,7 @@ div {
     --mainWidth: calc(100% - var(--sidebarWidth));
 
     --headerMargin: 20px;
+    --mainMargin: 30px;
 
     --mainColor: #f9f9f9;
     --headerColor: rgba(255, 255, 255, 0.9); /*white 투명도*/
@@ -86,7 +87,7 @@ header {
     line-height: var(--searchHeight);
     background-color: white;
 
-    font-size: 14px;
+    font-size: 13px;
     font-family: var(--englishFont);
     padding-left: 10px;
     border-right: 1px solid #cccccc;
@@ -250,24 +251,116 @@ main {
     width: var(--mainWidth);
     margin-left: var(--sidebarWidth);
     background-color: var(--mainColor);
-    padding: 15px;
+    padding: 0 var(--headerMargin);
     box-sizing: border-box;
+}
+
+/* ------추천------ */
+
+.main-block {
+    padding: var(--mainMargin) 0;
+    border-bottom: 3px solid #dddddd;
 }
 
 .main-title {
     font-family: var(--englishFont);
     font-size: 16px;
     font-weight: bold;
-    padding: 20px 0;
+    padding-bottom: var(--headerMargin);
 }
 
 .video-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-row-gap: var(--mainMargin);
+    grid-column-gap: 10px;
+}
+
+.video {
+    width: 100%;
+    padding-top: 55%;
+    background-color: #eeeeee;
+}
+
+.video-content {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.video-content-main {
+    display: flex;
+}
+
+.video-left {
+    width: 25px; height: 25px;
+    border-radius: 300px;
+    background-color: #cccccc;
+    margin-right: 5px;
+}
+
+.video-text {
+    font-family: var(--koreanFont);
+    font-size: 12px;
+}
+
+.video-title {
+    font-weight: bold;
+}
+
+.video-sub {
+    color: var(--iconColor);
+    margin-top: 5px;
+}
+
+.video-sub div:last-child {
+    font-family: var(--englishFont);
+    margin-left: 2px;
+}
+
+.video-right {
+    display: none;
+}
+
+.video-wrap:hover {
+    cursor: pointer;
+}
+
+.video-wrap:hover > .video-content > .video-right {
+    display: block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #cccccc;
 }
 
 
+/* ---------탑픽스--------- */
+
+.picks-title {
+    display: flex;
+    align-items: center;
+    font-family: var(--englishFont);
+}
+
+.picks-title-left {
+    width: 35px; height: 35px;
+    border-radius: 300px;
+    background-color: var(--iconColor);
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.picks-title-right .title {
+    font-weight: bold;
+}
+
+.pick-title-right span {
+    font-size: 12px;
+    color: var(--iconColor);
+}
 
 
 
