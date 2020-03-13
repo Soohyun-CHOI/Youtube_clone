@@ -34,13 +34,15 @@
     box-sizing: border-box;
 
     font-family: var(--englishFont);
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .menu-sm {
     width: var(--smsidebarWidth);
+    height: var(--smsidebarWidth);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -56,4 +58,24 @@
 
 .menu-sm-title {
     margin-top: 3px;
+}
+
+
+
+/* ==================Main Contents================= */
+
+.content-wrap {
+    width: var(--smmainWidth);
+    margin-left: var(--smsidebarWidth);
+    background-color: var(--mainColor);
+    padding: 0 var(--headerMargin);
+    box-sizing: border-box;
+}
+
+.video-text {
+    font-size: 11px;
+}
+
+.video-sub {
+    margin-top: 0;
 }

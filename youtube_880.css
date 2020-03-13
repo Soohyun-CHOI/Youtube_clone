@@ -1,14 +1,11 @@
-.search-text {
-    width: 38vw;
-}
 
 .video-container {
     grid-template-columns: repeat(3, 1fr);
-    height: 440px;
+    height: 420px;
     overflow: hidden;
 }
 
 .more-video-block {
-    height: 210px;
+    height: 200px;
     grid-row-gap: 100px;
 }

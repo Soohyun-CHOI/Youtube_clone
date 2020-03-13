@@ -1,0 +1,15 @@
+.search-text {
+    width: 30vw;
+}
+
+.video-container {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    overflow: hidden;
+}
+
+.more-video-block {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    grid-row-gap: var(--mainMargin);
+}

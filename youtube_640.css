@@ -1,0 +1,15 @@
+.search-text {
+    width: 20vw;
+}
+
+.menu-bar-sm {
+    display: none;
+}
+
+.content-wrap {
+    width: 100%;
+    margin-left: 0;
+    background-color: var(--mainColor);
+    padding: 0 var(--headerMargin);
+    box-sizing: border-box;
+}
