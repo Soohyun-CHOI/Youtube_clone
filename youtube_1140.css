@@ -1,6 +1,6 @@
 :root {
     --headerHeight: 45px;
-    --searchHeight: 20px;
+    --searchHeight: 25px;
     --sidevarHeight: calc(100vh - var(--headerHeight));
 
     --sidebarWidth: 190px; 
